@@ -20,7 +20,14 @@
 	[ShowAlert setTitle:@"Load Alert" forState:UIControlStateNormal];
 	ShowAlert.frame = CGRectMake(80, 50, 160, 40);
 	
+	//Loader UIButton
+	
+	ShowLoader = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[ShowLoader addTarget:self action:@selector(ShowActivityIndicator:) forControlEvents:UIControlEventTouchDown];
+	[ShowLoader setTitle:@"Show Loader" forState:UIControlStateNormal];
+	ShowLoader.frame = CGRectMake(80, 120, 160, 40);
 	[self.view addSubview:ShowAlert];
+	[self.view addSubview:ShowLoader];
 
 }
 
@@ -30,6 +37,17 @@
 	
 	[[activity currentIndicator] displayCompleted:@"You Got it!"];
 }
+
+//Show Loader
+
+- (IBAction) ShowActivityIndicator: (id) sender {
+	
+	//Replace You Got it with Spinner
+	
+	[[activity currentIndicator] displayCompleted:@""];
+	[[activity currentIndicator] showSpinner];
+}
+
 
 - (void)dealloc {
     [super dealloc];

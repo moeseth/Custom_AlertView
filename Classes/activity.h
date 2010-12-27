@@ -11,6 +11,7 @@
 @interface activity : UIView {
 	UILabel *centerMsg;
 	UILabel *subMsg;
+	UIActivityIndicatorView *spinner;
 }
 
 @property (nonatomic, retain) UILabel *centerMsg;
@@ -27,5 +28,6 @@
 - (void)displayCompleted:(NSString *)m;
 - (void)setCenterMessage:(NSString *)message;
 - (void)setSubMessage:(NSString *)message;
+- (void)showSpinner;
 
 @end

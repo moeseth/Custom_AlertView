@@ -191,4 +191,13 @@ static activity *currentIndicator = nil;
 	}
 }
 
+//Customize Spinner
+
+- (void) showSpinner {
+	spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	spinner.frame = CGRectMake(70, self.bounds.size.height - 45, 30, 30);
+	[self addSubview:spinner];
+	[spinner startAnimating];
+}
+
 @end

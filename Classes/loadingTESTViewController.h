@@ -11,9 +11,12 @@
 
 @interface loadingTESTViewController : UIViewController {
 	UIButton *ShowAlert;
+	UIButton *ShowLoader;
 }
 
 - (IBAction) COMEON: (id) sender;
+
+- (IBAction) ShowActivityIndicator: (id) sender;
 
 @end
 
